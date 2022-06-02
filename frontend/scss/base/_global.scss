@@ -1,0 +1,7 @@
+@use '../themes/theme';
+
+hr {
+  background-color: theme.$surface-color;
+  border: 1px solid theme.$surface-color;
+  margin: 0;
+}

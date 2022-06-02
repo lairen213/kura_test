@@ -1,0 +1,25 @@
+@use '../themes/theme';
+@use '../base/typography';
+@use '../base/size';
+
+.tab {
+    .count-friends-text {
+        color:theme.$text-color;   
+    }
+    @include typography.header-3;
+    @include size.on-mobile {
+        @include typography.text-3;
+        font-weight: 700;
+    }
+    background-color: theme.$primary-btn-color;
+    height: 16px;
+    text-align: center;
+    padding: 12px 0 12px 0;
+    border-radius: 40px;
+    margin-bottom: 16px;
+}
+
+.tab-selected{
+    background-color: theme.$primary-color;
+    color: theme.$primary-btn-color;
+}

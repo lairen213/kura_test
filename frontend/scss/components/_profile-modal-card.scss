@@ -1,0 +1,137 @@
+@use "../base/size";
+@use "../base/typography";
+@use "../themes/theme";
+
+.modal-dialog {
+  margin-top: 70px;
+}
+
+.modal-btn-close {
+  padding: 5px;
+  > img {
+    cursor: pointer;
+    float: right;
+
+    @include size.on-pc {
+      margin-right: -40px;
+    }
+
+    @include size.on-mobile {
+      margin-top: -40px;
+    }
+  }
+}
+
+.profile-modal-card {
+  padding: 30px 0;
+  @include size.on-mobile {
+    padding: 15px 0;
+  }
+}
+
+.profile-modal-card-title {
+  @include typography.header-2;
+}
+
+.profile-modal-card-main-info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  margin-top: 26px;
+
+  .profile-info {
+    display: flex;
+  }
+}
+
+.profile-info-action {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 22px;
+
+  .profile-info-action-title {
+    @include typography.header-3;
+    font-weight: 700;
+  }
+
+  .profile-info-action-subtitle {
+    @include typography.text-3;
+    color: theme.$text-color;
+  }
+}
+
+.profile-add-info {
+  display: flex;
+  @include typography.header-4;
+
+  @include size.on-mobile {
+    margin-top: 26px;
+    justify-content: space-between;
+  }
+
+  @include size.on-pc {
+    margin-left: auto;
+  }
+
+  .profile-add-info-names {
+    font-weight: 600;
+
+    @include size.on-pc {
+      text-align: end;
+    }
+
+    > div {
+      margin-bottom: 20px;
+    }
+  }
+
+  .profile-add-info-values {
+    margin-left: 22px;
+    > div {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.profile-modal-card-subtitle {
+  @include size.on-mobile {
+    margin-top: 15px;
+  }
+  @include typography.header-3;
+  margin-bottom: 16px;
+}
+
+.profile-modal-card-media {
+  > div {
+    margin-right: 20px;
+    display: inline-block;
+  }
+}
+
+.profile-modal-card-labels {
+  > div {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+
+    @include size.on-mobile {
+      margin-right: 5px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.profile-modal-card-description {
+  @include typography.text-2;
+  color: theme.$text-color;
+
+  max-width: 455px;
+}
+
+.profile-modal-card-max-income {
+  @include typography.header-0;
+  color: theme.$primary-color;
+  font-weight: 500;
+}

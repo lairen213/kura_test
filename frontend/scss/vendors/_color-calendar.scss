@@ -1,0 +1,34 @@
+@use '../base/typography';
+@use '../themes/theme';
+
+@import "../../node_modules/color-calendar/dist/css/theme-basic.css";
+@import "../../node_modules/color-calendar/dist/css/theme-glass.css";
+
+.color-calendar.basic {
+  @include typography.text-3;
+  font-weight: 400;
+  box-shadow: none;
+}
+
+.color-calendar.basic.color-calendar--small .calendar__header .calendar__monthyear {
+  @include typography.text-3;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.color-calendar.basic .calendar__days .calendar__day-selected .calendar__day-box {
+  background-color: theme.$primary-color;
+}
+
+.color-calendar.basic.color-calendar--small .calendar__header {
+  grid-template-columns: repeat(7, minmax(20px, 30px));
+}
+
+.color-calendar.basic.color-calendar--small .calendar__body .calendar__weekdays {
+  grid-template-columns: repeat(7, minmax(20px, 30px));
+}
+
+.color-calendar.basic.color-calendar--small .calendar__body .calendar__days {
+  grid-template-columns: repeat(7, minmax(20px, 30px));
+  grid-template-rows: repeat(6, minmax(20px, 30px));
+}

@@ -1,0 +1,109 @@
+@use '../themes/theme';
+@use '../base/typography';
+@use '../base/size';
+
+.btn {
+  display: block;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-primary {
+  background-image: theme.$primary-gradient;
+  color: theme.$primary-btn-color;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.53);
+  
+  &:hover {
+    background-image: theme.$primary-gradient-hover;
+  }
+
+  &:focus {
+    background-image: theme.$primary-gradient-hover;
+  }
+}
+
+.btn-info {
+  background-image: theme.$info-gradient;
+  color: theme.$info-text-color;
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.53);
+  
+  &:hover {
+    background-image: theme.$info-gradient-hover;
+  }
+
+  &:focus {
+    background-image: theme.$info-gradient-hover;
+  }
+}
+
+@mixin btn-regular {
+  background-color: white;
+  color: theme.$primary-color;
+  border: 1px solid theme.$primary-color;
+}
+
+.btn-regular {
+ @include btn-regular;
+}
+
+.btn-regular-dot {
+  @include btn-regular;
+  border-style: dashed;
+}
+
+.btn-link {
+  border: none;
+  background: transparent;
+  color: theme.$primary-color;
+
+  border-radius: 0px;
+  text-decoration: underline;
+  @include typography.text-4;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  > img {
+    margin-left: 8px;
+  }
+}
+
+.btn-l {
+  @include typography.text-4;
+  padding: 14px 28px;
+  font-weight: 700;
+
+  @include size.on-mobile {
+    @include typography.text-5;
+    padding: 10px 15px;
+  }
+
+  > img {
+    margin-left: 8px;
+  }
+}
+
+.btn-l-mobile {
+  @include size.on-mobile {
+    padding: 7px 15px;
+    @include typography.text-5;
+  }
+}
+
+.btn-xl {
+  @include typography.text-3;
+  font-weight: 700;
+  padding: 26px 28px;
+
+  @include size.on-mobile {
+    padding: 16px 21px;
+  }
+
+  > img {
+    margin-left: 18px;
+  }
+}

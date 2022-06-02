@@ -1,0 +1,36 @@
+@use "../themes/theme";
+@use "../base/size";
+@use "../base/typography";
+
+.tabs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px, 2fr));
+  gap: 16px;
+}
+
+.friends-list-item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 16px 16px;
+  @include size.on-mobile {
+    padding: 16px 8px;
+  }
+}
+
+.friend-list-item-actions {
+  display: flex;
+  @include size.on-mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .spring {
+    width: 20px;
+    height: 8px;
+  }
+}
+
+.friends-search-input-container {
+  margin-bottom: 30px;
+}

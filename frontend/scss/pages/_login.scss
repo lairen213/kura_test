@@ -1,0 +1,97 @@
+@use "../themes/theme";
+@use "../base/size";
+@use "../base/typography";
+@use "../components/box";
+
+.login-container {
+  background-color: #E5E5E5;
+
+  @include size.on-pc {
+    height: calc(100vh - 45px + 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  background-image: url('../../image/login-bg.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding: 45px 30px 0;
+}
+
+.login-box {
+  @include box.box-styled;
+  @include size.on-pc {
+    min-width: 585px;
+    padding: 26px 48px 74px;
+  }
+  @include size.on-mobile {
+    padding: 20px;
+  }
+  z-index: 100000;
+  > .login-logo-container {
+    text-align: center;
+  }
+}
+
+.login-title {
+  @include typography.header-1;
+  @include size.on-mobile {
+    @include typography.header-4;
+    font-weight: 500;
+    color: theme.$primary-color;
+  }
+  font-weight: 500;
+  color: theme.$primary-color;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.login-form-container {
+  margin-bottom: 30px;
+  @include size.on-mobile {
+    margin-bottom: 15px;
+  }
+}
+
+.login-actions-container {
+  display: flex;
+  justify-content: space-around;
+
+  > .login-btn {
+    box-shadow: 0px 0px 11.675724983215332px 0px rgba(255, 255, 255, 0.53) inset;
+  }
+}
+
+@include size.on-pc {
+  .login-person-box-pc {
+    align-self: flex-end;
+    > img {
+      transform: scale(1.012);
+    }
+  }
+
+  .login-person-box-mobile {
+    display: none;
+  }
+}
+
+.login-person-container-mobile {
+  display: flex;
+  justify-content: center;
+}
+
+@include size.on-mobile {
+  .login-person-box-pc {
+    display: none;
+  }
+
+  .login-person-box-mobile {
+    box-sizing: border-box;
+    > img {
+      height: 220px;
+      transform: scale(1.045);
+    }
+  }
+}

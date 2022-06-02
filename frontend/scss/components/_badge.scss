@@ -1,0 +1,34 @@
+@use '../base/typography';
+@use '../themes/theme';
+
+.badge {
+  @include typography.text-4;
+  border-radius: 5px;
+  padding: 2px 8px;
+  display: inline-flex;
+}
+
+.badge-danger {
+  background-color: theme.$danger-badge-color;
+  color: theme.$danger-badge-text-color;
+}
+
+.badge-info {
+  background-color: theme.$info-badge-color;
+  color: theme.$info-badge-text-color;
+}
+
+.badge-warning {
+  background-color: theme.$warning-badge-color;
+  color: theme.$warning-badge-text-color;
+}
+
+.badge-success {
+  background-color: theme.$success-badge-color;
+  color: theme.$success-badge-text-color;
+}
+
+.badge-error {
+  background-color: theme.$error-badge-color;
+  color: theme.$error-badge-text-color;
+}

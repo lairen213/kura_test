@@ -1,0 +1,57 @@
+@use '../themes/theme';
+@use '../base/typography';
+@use '../base/size';
+
+.chats-card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: theme.$info-card-gradient;
+  border-radius: 22px;
+  padding: 42px 42px 0px 42px;
+
+  @include size.on-mobile {
+    border-radius: 18px;
+    padding: 20px;
+  }
+
+  > .chats-card-title {
+    @include typography.header-0;
+    margin-bottom: 14px;
+    color: theme.$primary-btn-color;
+
+    @include size.on-mobile {
+      @include typography.header-2;
+      margin-bottom: 9px;
+      color: theme.$primary-btn-color;
+    }
+  }
+
+  > .chats-card-description {
+    @include typography.text-2;
+    color: theme.$primary-btn-color;
+    margin-bottom: auto;
+    @include size.on-mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  > .chats-card-image {
+    text-align: center;
+
+    @include size.on-mobile {
+      display: none;
+    }
+  }
+
+  > .chats-card-action-button {
+    @include size.on-pc {
+      position: absolute;
+      bottom: 37px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-48%);
+      min-width: 70%;
+    }
+  }
+}

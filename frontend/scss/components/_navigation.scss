@@ -1,0 +1,13 @@
+@use "../components/box";
+@use "../base/size";
+@use "../base/typography";
+@use "../themes/theme";
+
+.navigation-container {
+  color: theme.$primary-color;
+  display: flex;
+  
+  .delimeter {
+    margin: 0 10px;
+  }
+}

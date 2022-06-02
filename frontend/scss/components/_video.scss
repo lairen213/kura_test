@@ -1,0 +1,45 @@
+@use "../components/box";
+@use "../base/size";
+@use "../base/typography";
+@use "../themes/theme";
+
+.video-container-title {
+  @include typography.header-3;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  height: 354px;
+  width: 100%;
+  background-color: #F1F1F1;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container-btn {
+  height: 52px;
+  width: 52px;
+  border-radius: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: theme.$primary-gradient;
+  cursor: pointer;
+}
+
+.video-add-file {
+  @include typography.text-2;
+  color: theme.$primary-color;
+  vertical-align: middle;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  > img {
+    width: 13px;
+    margin-right: 18px;
+  }
+}

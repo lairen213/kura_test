@@ -1,0 +1,18 @@
+@use '../themes/theme';
+@use '../base/size';
+
+@mixin box-styled {
+  background-color: theme.$surface-container-color;
+  border-radius: 28px;
+
+  margin-bottom: 25px;
+}
+
+.box {
+  @include box-styled;
+  @include size.on-mobile {
+    padding: size.$box-padding-size-mobile;
+  }
+  padding: size.$box-padding-size;
+}
+

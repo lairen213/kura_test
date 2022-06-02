@@ -1,0 +1,43 @@
+@use "../components/box";
+@use "../base/size";
+@use "../base/typography";
+@use "../themes/theme";
+
+.module-card-mini-container {
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 6.309523582458496px 14.196428298950195px 0px rgba(33, 42, 51, 0.02);
+  padding: 10px 12px;
+}
+
+.module-card-mini-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 16em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 30% 30%;
+  background-color: rgba(165, 166, 246, 0.18);
+  background-image: url("../../image/play.png");
+}
+
+.module-card-mini-description {
+  margin-left: 6px;
+}
+
+.module-card-mini-title {
+  @include typography.text-4;
+  font-weight: 700;
+}
+
+.module-card-mini-subtitle {
+  @include typography.text-4;
+}
+
+.module-card-mini-data-span {
+  margin-top: 4px;
+  @include typography.text-4;
+  color: theme.$primary-color;
+}

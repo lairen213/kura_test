@@ -1,0 +1,67 @@
+@use "../components/box";
+@use "../base/size";
+@use "../base/typography";
+@use "../themes/theme";
+
+.leaders-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px, 3fr));
+  grid-gap: 22px;
+  
+  box-sizing: border-box;
+}
+
+.box-leaders {
+  @include box.box-styled;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  @include size.on-mobile {
+    padding: 10px;
+  }
+
+  .leader-title {
+    @include typography.header-3;
+    color: theme.$primary-color;
+    margin-bottom: 18px;
+
+    @include size.on-mobile {
+      margin-bottom: 8px;
+    }
+  }
+
+  .leader-name {
+    @include typography.text-3;
+    font-weight: 700;
+    margin-top: 12px;
+    @include size.on-mobile {
+      @include typography.text-4;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.team-chats-card-conteiner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  grid-gap: 22px;
+  margin-bottom: 20px;
+}
+
+.team-members-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 22px;
+  @include size.on-mobile {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+}

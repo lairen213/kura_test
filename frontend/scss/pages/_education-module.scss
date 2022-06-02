@@ -1,0 +1,41 @@
+@use "../base/size";
+@use "../base/typography";
+@use "../components/box";
+@use "../themes/theme";
+
+.education-lesson-container {
+  @include size.on-pc {
+    min-width: 390px;;
+  }
+}
+
+.education-lesson-card-description {
+  > div {
+    margin-top: 15px;
+  }
+
+  .education-card-description-title {
+    @include typography.header-3;
+    font-weight: 700;
+    @include size.on-mobile {
+      @include typography.header-4;
+      font-weight: 700;
+    }
+  }
+
+  .education-card-description-subtitle {
+    @include typography.header-4;
+    color: theme.$text-color;
+    margin-top: 6px;
+
+    @include size.on-mobile {
+      @include typography.text-3;
+    }
+  }
+}
+
+.educations-lesson-title {
+  margin: 12px 0 20px;
+  @include typography.header-2;
+  font-weight: 700;
+}

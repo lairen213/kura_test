@@ -1,0 +1,11 @@
+@use "../base/size";
+
+.ethers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  text-align: center;
+  @include size.on-mobile {
+    grid-gap: 3px;
+  }
+}

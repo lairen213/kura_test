@@ -1,0 +1,29 @@
+@use '../themes/theme';
+@use '../base/size';
+@use '../base/typography';
+
+.small-profile-card {
+  display: flex;
+  margin-right: 10px;
+  align-items: center;
+  cursor: pointer;
+
+  .small-profile-card-info {
+    margin-left: 10px;
+    .small-profile-card-name {
+      @include typography.text-3;
+      font-weight: 700;
+      @include size.on-mobile {
+        @include typography.text-4;
+      }
+    }
+    
+    .small-profile-card-status {
+      @include typography.text-4;
+      color: theme.$text-color;
+      @include size.on-mobile {
+        @include typography.text-5;
+      }
+    }
+  }
+}

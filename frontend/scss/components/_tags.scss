@@ -1,0 +1,20 @@
+@use "../base/typography";
+@use "../base/size";
+@use "../themes/theme";
+
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #E9E9E9;
+  border-radius: 7px;
+  @include typography.text-4;
+
+  @include size.on-mobile {
+    @include typography.text-5;
+  }
+}
+
+.tag-primary-outline {
+  color: theme.$primary-color;
+  border-color: theme.$primary-color;;
+}

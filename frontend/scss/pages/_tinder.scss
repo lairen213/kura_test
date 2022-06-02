@@ -1,0 +1,80 @@
+@use "../themes/theme";
+@use "../base/size";
+@use "../base/typography";
+
+.tinder-search-input-container {
+  margin-bottom: 16px;
+}
+
+.tinder-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include size.on-pc {
+    justify-content: space-between;
+  }
+
+  .tinder-list-item-number {
+    @include typography.header-4;
+    padding: 2px 6px;
+    border-radius: 6px;
+    border: 1px solid #E9E9E9;
+    margin-right: 14px;
+  }
+
+  .tinder-max-income-container-mobile {
+    @include size.on-pc {
+      display: none;
+    }
+
+    > .tinder-max-income-title {
+      @include typography.text-5;
+    }
+
+    > .tinder-max-income-price {
+      @include typography.text-5;
+      color: theme.$primary-color;
+    }
+  }
+
+  .tinder-max-income-container-pc {
+    @include size.on-mobile {
+      display: none;
+    }
+
+    > .tinder-max-income-title {
+      @include typography.text-4;
+    }
+
+    > .tinder-max-income-price {
+      @include typography.header-4;
+      color: theme.$primary-color;
+    }
+  }
+}
+
+.tinder-list-item-tags {
+  margin-top: 16px;
+  overflow: hidden;
+  > .tag {
+    margin-bottom: 3px;
+  }
+}
+
+.tinder-list-item-pc-actions {
+  @include size.on-mobile {
+    display: none;
+  }
+}
+
+.tinder-list-item-mobile-actions {
+  @include size.on-pc {
+    display: none;
+  }
+}
+
+.tinder-profile-card-status {
+  @include size.on-mobile {
+    display: none;
+  }
+}

@@ -1,0 +1,38 @@
+@use '../base/size';
+@use '../base/typography';
+@use '../components/box';
+
+.education-calendar-container {
+  @include size.on-pc {
+    float: right;
+    margin-left: 20px;
+  }
+}
+
+.educations-container {
+  display: flex;
+
+  @include size.on-mobile {
+    flex-direction: column-reverse;
+  }
+}
+
+.education-side-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-left: 20px;
+  @include box.box-styled;
+  padding: 20px;
+
+  @include size.on-mobile {
+    margin-left: 0;
+  }
+
+  .education-side-container-title {
+    text-align: center;
+    @include typography.header-3;
+    font-weight: 700;
+  }
+}

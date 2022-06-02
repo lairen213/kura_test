@@ -1,0 +1,35 @@
+// main color
+$primary-color: #F1488D;
+$surface-color: #F1F1F1;
+$surface-icon-color: #F8F8F8;
+$surface-container-color: #FFFFFF;
+
+// typography
+$header-color: #383646;
+$text-color: #8B8B8B;
+$primary-btn-color: #FFFFFF;
+
+$info-text-color: rgba(108, 167, 255, 1);
+
+// gradients
+$primary-gradient: radial-gradient(#FFB5C7 0%, #FF4D77  100%);
+$primary-gradient-hover: radial-gradient(#FFD6DF 0%, #FF83A0  100%);
+$primary-gradient-focus: radial-gradient(#FFD6DF 0%, #FF83A0  51%);
+
+$info-card-gradient: radial-gradient(#A7CAFF 0%, #4D94FF  100%);
+
+$info-gradient: linear-gradient(#FFFFFF, #CADFFF);
+$info-gradient-hover: linear-gradient(#F0F6FF, #A3C8FF);
+$info-gradient-focus: linear-gradient(#A3C8FF, #F0F6FF);
+
+// badge
+$danger-badge-color: rgba(167, 72, 241, 0.05);
+$danger-badge-text-color: rgba(167, 139, 184, 1);
+$info-badge-color: #F0FBFF;
+$info-badge-text-color: #7db8d2;
+$warning-badge-color: #FEF9ED;
+$warning-badge-text-color: #BDA979;
+$success-badge-color: rgba(72, 241, 109, 0.05);
+$success-badge-text-color: rgba(156, 211, 177, 1);
+$error-badge-color: #FEF6F9;
+$error-badge-text-color: #F1488D;

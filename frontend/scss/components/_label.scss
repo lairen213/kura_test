@@ -1,0 +1,44 @@
+@use '../base/typography';
+@use '../base/size';
+@use '../themes/theme';
+
+@mixin label-container {
+  padding: 8px 12px;
+  border-radius: 8px;
+  @include typography.text-3;
+  @include size.on-mobile {
+    @include typography.text-4;
+  }
+}
+
+.label {
+  @include label-container;
+  color: white;
+  background-image: theme.$primary-gradient;
+}
+
+.lable-outline {
+  display: inline-block;
+  @include label-container;
+  font-weight: 500;
+  color: theme.$primary-color;
+  background-image: white;
+  border: 1px solid rgba(241, 72, 141, 0.15);
+
+  > img {
+    margin-right: 8px;
+  }
+}
+
+.lable-disable {
+  display: inline-block;
+  @include label-container;
+  font-weight: 500;
+  color: theme.$text-color;
+  background-image: white;
+  border: none;
+
+  > img {
+    margin-right: 8px;
+  }
+}
